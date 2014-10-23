@@ -10,13 +10,18 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 <body>
+<div class= "container">
 
-<h1>My first PHP page</h1>
+	<h1>Login Page</h1>
 
-<?php
-$cars=array("Volvo","BMW","Toyota");
-echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
-?>
+	<form action="welcome.php" method="post">
+	<input type="text" class="form-control" placeholder="First name" name="firstName"><br>
+	<input type="text" class="form-control" placeholder="Last name" name="lastName"><br>
+	<input type="text" class="form-control" placeholder="Email" name="email"><br>
+	<input type="submit" class="btn btn-primary">
+	</form>
+</div>
+
 
 
 </body>
