@@ -12,13 +12,14 @@
 <body>
 <div class= "container">
 
-	<h1>PHP Application</h1>
-	<h5>Boiler plate PHP code</h5>
-	<br>
-	<form action="loginFrontend.php">
-		<button type="submit" type="button" class="btn btn-primary">Login</button>
-	</form>
+	<h1>Login Page</h1>
 
+	<form action="welcome.php" method="post">
+	<input type="text" class="form-control" placeholder="First name" name="firstName"><br>
+	<input type="text" class="form-control" placeholder="Last name" name="lastName"><br>
+	<input type="text" class="form-control" placeholder="Email" name="email"><br>
+	<input type="submit" class="btn btn-primary">
+	</form>
 </div>
 
 
