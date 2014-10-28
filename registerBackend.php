@@ -10,15 +10,11 @@
 <div class= "container">
 	<body>
 	<?php 
-	// $firstName = (string)$_POST["firstName"];
-	// $lastName = (string)$_POST["lastName"];
-	// $email = (string)$_POST["email"]; 
-	?>
+	
+	$firstName = $_POST["firstName"];
+	$lastName = $_POST["lastName"];
+	$email = $_POST["email"];
 
-	Welcome <?php echo $_POST["firstName"]; ?><br>
-	Your last name is: <?php echo $_POST["lastName"]; ?><br>
-
-	<?php
 	$servername = "localhost";
 	$username = "simon";
 	$password = "aPs55NfANfbNEr7Q";
@@ -26,22 +22,21 @@
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
+
 	// Check connection
-	if (mysqli_connect_errno()) {
-	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	$sql = "INSERT INTO MyGuests (firstname, lastname, email)
+	VALUES ('$firstName', '$lastName', '$email')";
+
+	if ($conn->query($sql) === TRUE) {
+	    echo "<h1> Congratulations! You're signed up! </h1>";
+	    echo '<form action="home.php"> <button type="submit" type="button" class="btn btn-primary">Continue to site!</button></form>';
+	} else {
+	    echo "Oh shit " . $sql . "<br>" . $conn->error;
 	}
+	echo "Connected successfully";
+		?>
 
-	$result = mysqli_query($con,"SELECT * FROM MyGuests
-	WHERE firstname='Simon'");
-
-	while($row = mysqli_fetch_array($result)) {
-	  echo $row['firstname'] . " " . $row['lastname'];
-	  echo "<br>";
-	}
-	?>
-
-	
 </div>
-
+	
 </body>
 </html>

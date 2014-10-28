@@ -12,11 +12,12 @@
 <body>
 <div class= "container">
 
-	<h1>Login Page</h1>
+	<h1>Register Page</h1>
 
-	<form action="loginBackend.php" method="post">
+	<form action="registerBackend.php" method="post">
 	<input type="text" class="form-control" placeholder="First name" name="firstName"><br>
 	<input type="text" class="form-control" placeholder="Last name" name="lastName"><br>
+	<input type="text" class="form-control" placeholder="Email" name="email"><br>
 	<input type="submit" class="btn btn-primary">
 	</form>
 </div>

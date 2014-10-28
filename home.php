@@ -12,13 +12,25 @@
 <body>
 <div class= "container">
 
-	<h1>Login Page</h1>
+	<h1>You made it in!</h1>
+	<h5>yipee!</h5>
+	<br>
+	<?php
+	$servername = "www.archivedb.carleton.edu";
+	$username = "readuser";
+	$password = "readonly";
 
-	<form action="loginBackend.php" method="post">
-	<input type="text" class="form-control" placeholder="First name" name="firstName"><br>
-	<input type="text" class="form-control" placeholder="Last name" name="lastName"><br>
-	<input type="submit" class="btn btn-primary">
-	</form>
+	// Create connection
+	$conn = new mysqli($servername, $username, $password);
+
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+	echo "Connected successfully";
+	?>
+	
+
 </div>
 
 
