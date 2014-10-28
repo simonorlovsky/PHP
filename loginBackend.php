@@ -32,7 +32,7 @@
 	}
 
 	$result = mysqli_query($con,"SELECT * FROM MyGuests
-	WHERE firstname='Simon'");
+	WHERE firstname=");
 
 	while($row = mysqli_fetch_array($result)) {
 	  echo $row['firstname'] . " " . $row['lastname'];

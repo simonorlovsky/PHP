@@ -15,20 +15,6 @@
 	<h1>You made it in!</h1>
 	<h5>yipee!</h5>
 	<br>
-	<?php
-	$servername = "www.archivedb.carleton.edu";
-	$username = "readuser";
-	$password = "readonly";
-
-	// Create connection
-	$conn = new mysqli($servername, $username, $password);
-
-	// Check connection
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
-	echo "Connected successfully";
-	?>
 	
 
 </div>
